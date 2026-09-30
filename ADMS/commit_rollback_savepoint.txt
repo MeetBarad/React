@@ -1,0 +1,58 @@
+
+SQL> select *from emp;
+
+       ENO ENM                  CITY
+---------- -------------------- --------------------
+         1 Ivan                 Boston
+         2 Jones                Germany
+         3 Kelvin               Boston
+         4 Blake                Boston
+         5 Frenny               Baroda
+
+SQL> savepoint s1;
+
+Savepoint created.
+
+SQL> delete from emp where eno=5;
+
+1 row deleted.
+
+SQL> select *from emp;
+
+       ENO ENM                  CITY
+---------- -------------------- --------------------
+         1 Ivan                 Boston
+         2 Jones                Germany
+         3 Kelvin               Boston
+         4 Blake                Boston
+
+SQL> savepoint s2;
+
+Savepoint created.
+
+SQL> delete from emp where eno=4;
+
+1 row deleted.
+
+SQL> select *from emp;
+
+       ENO ENM                  CITY
+---------- -------------------- --------------------
+         1 Ivan                 Boston
+         2 Jones                Germany
+         3 Kelvin               Boston
+
+SQL> rollback to savepoint s2;
+
+Rollback complete.
+
+SQL> select *from emp;
+
+       ENO ENM                  CITY
+---------- -------------------- --------------------
+         1 Ivan                 Boston
+         2 Jones                Germany
+         3 Kelvin               Boston
+         4 Blake                Boston
+
+SQL>

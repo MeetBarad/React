@@ -1,0 +1,6 @@
+declare
+	enm varchar(20);
+begin
+	enm:=fun1(3);
+	DBMS_OUTPUT.PUT_LINE('Employee Name Is: '||enm);
+end;
