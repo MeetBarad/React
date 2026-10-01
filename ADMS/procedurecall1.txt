@@ -1,0 +1,6 @@
+declare
+	deptno number;
+begin
+	deptno:=&deptno;
+	p1(deptno);
+end;
