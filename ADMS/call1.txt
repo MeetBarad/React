@@ -1,0 +1,6 @@
+declare
+	dnm varchar(20);
+begin
+	dnm:=fun2(10);
+	DBMS_OUTPUT.PUT_LINE('Department Name Is: '||dnm);
+end;

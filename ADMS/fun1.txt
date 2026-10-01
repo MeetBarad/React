@@ -1,0 +1,6 @@
+create function fun2(dno number) return varchar2 is dnm varchar2(20);
+
+begin
+	select dname into dnm from dept where deptno=dno;
+	return dnm;
+end;
