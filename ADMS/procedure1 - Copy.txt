@@ -1,0 +1,8 @@
+create or replace procedure p1(dno number)
+as
+	dnm varchar2(20);
+	enm varchar2(20);
+begin
+	select dname,ename into dnm,enm from dept where deptno=dno;
+	dbms_output.put_line(dnm||'   '||enm);
+end;
