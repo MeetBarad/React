@@ -1,12 +1,8 @@
 @echo off
-cd /d D:\MEET
+cd /d D:\MEET\React\ADMS
 
 git add .
-git commit -m "Auto update"
+git commit -m "Auto update programs"
 git push origin main
 
-echo.
-echo ==========================
-echo GitHub Push Completed!
-echo ==========================
 pause
