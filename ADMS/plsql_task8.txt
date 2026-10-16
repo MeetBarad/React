@@ -1,0 +1,6 @@
+create or replace trigger task8 before insert on studinfo for each row
+begin
+	if:new.age<16 then
+		RAISE_APPLICATION_ERROR(-20002,'Student Not Eligable');
+	end if;	
+end;

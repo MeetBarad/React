@@ -1,0 +1,5 @@
+create or replace trigger task6 before insert on studinfo for each row
+begin
+	insert into backup_stud values(:old.rno,:old.name,:old.age);
+end;
+

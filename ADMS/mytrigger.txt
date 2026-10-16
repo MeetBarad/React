@@ -1,0 +1,4 @@
+create or replace trigger t1 after insert on stud for each row
+begin
+	insert into backup_stud values(:new.name,:new.percantage);
+end;

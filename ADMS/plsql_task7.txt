@@ -1,0 +1,4 @@
+create or replace trigger task7 before insert on studinfo for each row
+begin
+	:new.name:=Upper(:new.name);	
+end;
