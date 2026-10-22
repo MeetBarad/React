@@ -1,0 +1,10 @@
+create or replace procedure task5(pid number)
+as
+	pnm varchar2(20);
+	qt number;
+	pr number;
+begin
+	
+	select p_name,qty,price into pnm,qt,pr from productinfo where p_id=pid;
+	dbms_output.put_line(pnm||'   '||qt||'   '||pr);
+end;

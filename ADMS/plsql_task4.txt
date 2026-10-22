@@ -1,0 +1,11 @@
+create or replace procedure task4(sl number)
+as
+begin
+	for i in(
+		select e_name,city,salary from emp where salary>sl
+	)
+	loop
+		dbms_output.put_line(i.e_name||'   '||i.city||'   '||i.salary);
+	end loop;
+end;
+/

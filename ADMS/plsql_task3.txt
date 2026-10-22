@@ -1,0 +1,10 @@
+create or replace procedure task3(nm varchar(20))
+as
+	enm varchar2(20);
+	ct varchar2(20);
+	sal number;
+begin
+	select e_name,city,salary into enm,ct,sal from emp where e_name=nm;
+	dbms_output.put_line(enm||'   '||ct||'   '||sal);
+end;
+/

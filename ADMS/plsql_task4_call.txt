@@ -1,0 +1,6 @@
+declare
+	sl number;
+begin
+	sl:=&sl;
+	task4(sl);
+end;

@@ -1,0 +1,6 @@
+declare
+	pid number;
+begin
+	pid:=&pid;
+	task5(pid);
+end;
