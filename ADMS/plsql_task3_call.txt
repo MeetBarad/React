@@ -1,0 +1,6 @@
+declare
+	nm varchar2(20);
+begin
+	nm:='&nm';
+	task3(nm);
+end;

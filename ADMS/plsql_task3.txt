@@ -1,4 +1,4 @@
-create or replace procedure task3(nm varchar(20))
+create or replace procedure task3(nm varchar2)
 as
 	enm varchar2(20);
 	ct varchar2(20);

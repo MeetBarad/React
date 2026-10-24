@@ -1,0 +1,7 @@
+create function task2(e_id number) return number is sal number;
+
+begin
+	select salary into sal from emp where eid=e_id;
+	return sal;
+end;
+/

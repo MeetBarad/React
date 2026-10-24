@@ -1,0 +1,7 @@
+declare
+	eid number;
+begin
+	
+	eid:=task2(2);
+	DBMS_OUTPUT.PUT_LINE('Salary  Is: '||eid);
+end;

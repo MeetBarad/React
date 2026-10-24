@@ -1,0 +1,16 @@
+CREATE OR REPLACE FUNCTION fun2(eno NUMBER)
+RETURN VARCHAR2
+IS
+    dnm VARCHAR2(20);
+BEGIN
+    SELECT dname INTO dnm
+    FROM dept
+    WHERE deptno = (
+        SELECT deptno
+        FROM employee
+        WHERE empno = eno
+    );
+
+    RETURN dnm;
+END;
+/

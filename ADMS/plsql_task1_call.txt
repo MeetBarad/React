@@ -1,0 +1,7 @@
+DECLARE
+    dnm VARCHAR2(20);
+BEGIN
+    dnm := fun2(101);
+    DBMS_OUTPUT.PUT_LINE(dnm);
+END;
+/
